@@ -14,3 +14,5 @@ basic jwt auth implemented
 will be implementing other services in future  
 
 will use microservice architecture.  
+
+update application.yaml accordingly.  
