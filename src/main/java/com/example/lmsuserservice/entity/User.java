@@ -23,6 +23,8 @@ public class User {
 
     private String email;
 
+    //ROLE_TEACHER
+    //ROLE_STUDENT
     private String role;
 
     private String fullName;
