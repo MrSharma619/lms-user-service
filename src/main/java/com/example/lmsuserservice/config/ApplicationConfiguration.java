@@ -43,7 +43,9 @@ public class ApplicationConfiguration {
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration configuration = new CorsConfiguration();
 
-                configuration.setAllowedOrigins(Collections.singletonList("*"));      //allow all frontend calls
+                configuration.setAllowedOrigins(Arrays.asList(
+                        "http://localhost:3000"
+                ));      //allow all frontend calls(react proj)
                 //we dont want issue when these api's are called
 
                 configuration.setAllowedMethods(Collections.singletonList("*"));    //allow all methods
