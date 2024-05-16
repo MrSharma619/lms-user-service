@@ -3,12 +3,20 @@ server:
 
 spring:
   application:
-    name: USER_SERVICE
+    name: USER-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/lms_user_service
-    username: postgres
-    password: post
+    url: jdbc:postgresql://localhost:5432/${DB_DATABASE}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
 
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
